@@ -22,4 +22,8 @@ describe('appComponent',()=>{
     expect(component).toBeTruthy();
   })
 
+  it('should has title "unit-test"',()=>{
+    expect(component.title).toEqual('unit-test')
+  })
+
 })

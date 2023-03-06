@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'unit-test';
+
+  public soma(value1:any,value2:any):any{
+      return value1+value2;
+  }
 }
