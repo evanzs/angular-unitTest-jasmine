@@ -1,6 +1,7 @@
 import { CalcComponent } from './../../calc/calc.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from '../../app.component';
+import { ListaInvestimentosComponent } from 'src/app/lista-investimentos/lista-investimentos.component';
 
 
 describe('interface appComponent',()=>{
@@ -9,7 +10,7 @@ describe('interface appComponent',()=>{
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations:[AppComponent,CalcComponent]
+      declarations:[AppComponent,CalcComponent,ListaInvestimentosComponent]
     })
     .compileComponents();
 
