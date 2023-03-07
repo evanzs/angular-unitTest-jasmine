@@ -3,12 +3,12 @@
     <p> Olá Evans </p>
     <p> Ag: 9999 - C: 999999 </p>
 
-    <h2 id="montante">Montante: RS {{getMontante}}</h2>
-    <h3 id="poupanca">Poupança: RS {{getPoupanca}}</h3>
-    <h3 id="carteira">Carteira: RS {{getCarteira}}</h3>
-    <input type="text" #sacar>
-    <button id="btnSacar"(click)="setSacar(sacar.value)">Sacar</button>
-    <button id="btnDepositar"(click)="setDepositar(sacar.value)">Depositar</button>
+    <h2 id="h_montante">Montante: RS {{getMontante}}</h2>
+    <h3 id="h_poupanca">Poupança: RS {{getPoupanca}}</h3>
+    <h3 id="h_carteira">Carteira: RS {{getCarteira}}</h3>
+    <input id="input_sacar" type="text" #sacar>
+    <button id="btn_sacar"(click)="setSacar(sacar.value)">Sacar</button>
+    <button id="btn_depositar"(click)="setDepositar(sacar.value)">Depositar</button>
 
   </div>
 
