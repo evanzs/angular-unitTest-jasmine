@@ -18,7 +18,7 @@ describe('interface appComponent',()=>{
   });
 
   it('should render title',()=>{
-    expect(component.querySelector('#div').textContent).toContain('Hello World')
+    expect(component.querySelector('#title').textContent).toContain('Hello World')
   })
 
 })
