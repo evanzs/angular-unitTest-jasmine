@@ -40,10 +40,32 @@ describe('interface CalcComponent', () => {
     expect(nativeComponent.querySelector('#btn_depositar').textContent).toContain("Depositar");
   })
 
-  it('should transfer carteira to poupanca', () => {
+  it('should transfer poupanca to carteira', () => {
+    let expectValue = component.getCarteira + 10;
+    nativeComponent.querySelector('#input_sacar').value = 10;
+    nativeComponent.querySelector('#btn_sacar').click();
 
-     nativeComponent.querySelector('#')
-    expect(nativeComponent.querySelector('#btnDepositar').textContent).toContain("Depositar");
+    fixture.detectChanges();
+    expect(nativeComponent.querySelector('#h_carteira').textContent).toContain("Carteira: RS " + expectValue);
+  })
+
+  it('should att poupanca value', () => {
+    let expectValue = nativeComponent.querySelector('#h_poupanca').textContent
+    nativeComponent.querySelector('#input_sacar').value = 10;
+    nativeComponent.querySelector('#btn_sacar').click();
+
+    fixture.detectChanges();
+    expect(nativeComponent.querySelector('#h_poupanca').textContent).not.toContain(expectValue);
+  })
+
+
+  it('should transfer carteira to poupanca', () => {
+    let expectValue = component.getPoupanca + 10;
+    nativeComponent.querySelector('#input_sacar').value = 10;
+    nativeComponent.querySelector('#btn_depositar').click();
+
+    fixture.detectChanges();
+    expect(nativeComponent.querySelector('#h_poupanca').textContent).toContain("Poupança: RS " + expectValue);
   })
 
 });
