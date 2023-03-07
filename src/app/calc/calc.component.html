@@ -1,1 +1,15 @@
-<p>calc works!</p>
+
+  <div>
+    <p> Olá Evans </p>
+    <p> Ag: 9999 - C: 999999 </p>
+
+    <h2 id="montante">Montante: RS {{getMontante}}</h2>
+    <h3 id="poupanca">Poupança: RS {{getPoupanca}}</h3>
+    <h3 id="carteira">Carteira: RS {{getCarteira}}</h3>
+    <input type="text" #sacar>
+    <button id="btnSacar"(click)="setSacar(sacar.value)">Sacar</button>
+    <button id="btnDepositar"(click)="setDepositar(sacar.value)">Depositar</button>
+
+  </div>
+
+
