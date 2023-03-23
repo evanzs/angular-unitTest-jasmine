@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CalcComponent } from './calc/calc.component';
 import { ListaInvestimentosComponent } from './lista-investimentos/lista-investimentos.component';
 import {HttpClientModule} from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataBidingComponent } from './data-biding/data-biding.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     CalcComponent,
-    ListaInvestimentosComponent
+    ListaInvestimentosComponent,
+    DataBidingComponent
   ],
   imports: [
     BrowserModule,
