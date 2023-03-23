@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
 
 import { ListaInvestimentosComponent } from './lista-investimentos.component';
 
@@ -8,7 +10,9 @@ describe('ListaInvestimentosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListaInvestimentosComponent ]
+      declarations: [ ListaInvestimentosComponent ],
+      imports:[HttpClientTestingModule , MatCardModule],
+
     })
     .compileComponents();
 
