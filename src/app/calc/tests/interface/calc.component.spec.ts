@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
 import { CalcComponent } from '../../calc.component';
 
 
@@ -10,7 +11,8 @@ describe('interface CalcComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CalcComponent ]
+      declarations: [ CalcComponent ],
+      imports:[MatCardModule]
     })
     .compileComponents();
 
