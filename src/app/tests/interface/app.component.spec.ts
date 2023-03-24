@@ -1,3 +1,4 @@
+import { NewComponentComponent } from './../../shared/new-component/new-component.component';
 import { CalcComponent } from './../../calc/calc.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from '../../app.component';
@@ -12,7 +13,7 @@ describe('interface appComponent',()=>{
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations:[AppComponent,CalcComponent,ListaInvestimentosComponent],
+      declarations:[AppComponent,CalcComponent,ListaInvestimentosComponent, NewComponentComponent],
       imports:[HttpClientTestingModule, MatCardModule],
     })
     .compileComponents();

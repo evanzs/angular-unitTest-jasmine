@@ -9,20 +9,24 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataBidingComponent } from './data-biding/data-biding.component'
 import { FormsModule } from '@angular/forms';
+import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalcComponent,
     ListaInvestimentosComponent,
-    DataBidingComponent
+    DataBidingComponent,
+    DiretivasEstruturaisComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

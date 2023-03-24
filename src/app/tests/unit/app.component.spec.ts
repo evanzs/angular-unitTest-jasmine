@@ -4,6 +4,8 @@ import { AppComponent } from '../../app.component';
 import { ListaInvestimentosComponent } from 'src/app/lista-investimentos/lista-investimentos.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MatCardModule } from '@angular/material/card';
+import { NewComponentComponent } from 'src/app/shared/new-component/new-component.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 describe('appComponent',()=>{
@@ -12,7 +14,7 @@ describe('appComponent',()=>{
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations:[AppComponent,CalcComponent,ListaInvestimentosComponent],
+      declarations:[AppComponent,CalcComponent,ListaInvestimentosComponent, NewComponentComponent],
       imports:[HttpClientTestingModule, MatCardModule],
     })
     .compileComponents();
