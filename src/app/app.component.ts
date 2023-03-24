@@ -35,6 +35,7 @@ export class AppComponent implements OnInit,DoCheck,AfterContentChecked,AfterCon
 
   title = 'unit-test';
   valor:number = 1;
+  public addValue:number = 10;
 
 
 
