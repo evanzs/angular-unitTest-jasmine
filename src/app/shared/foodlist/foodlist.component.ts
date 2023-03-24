@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Investimento } from 'src/app/investimento';
+import { Alimento, Investimento } from 'src/app/investimento';
 import { FoodlistService } from 'src/app/services/foodlist.service';
 
 @Component({
@@ -12,11 +12,16 @@ export class FoodlistComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.list = this._service.foodlist();
+    this.getfood();
   }
-  public list:Array<Investimento> | undefined;
+  public list:Array<Alimento> | null =[];
 
 
-
+  getfood(){
+    this._service.getfoodList().subscribe({
+      next:(resp)=>{ this.list = resp;},
+      error: (error) => console.log(error)
+    });
+  }
 
 }
