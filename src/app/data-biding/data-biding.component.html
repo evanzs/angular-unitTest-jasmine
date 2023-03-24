@@ -1,1 +1,10 @@
-<p>data-biding works!</p>
+<p>{{ interpolation }}</p>
+<p> exemplo interpolation com  regras: {{ interpolation == '' }}</p>
+<h2> exemplo de property binding:</h2>
+<button [disabled]="btnDisable"> button cm disabled em property bind</button>
+<h2> exemplo de event binding:</h2>
+<button (mousemove)="btnMouseMove()" (mouseover)="btnMouseOver()" > button com classe em event bind</button>
+{{btnEstilo}}
+
+<h2> two-way bind</h2>
+<input [(ngModel)]="inputValue">{{inputValue}}
