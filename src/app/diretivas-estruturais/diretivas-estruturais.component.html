@@ -1,0 +1,43 @@
+
+<h2> utilizando ngIf </h2>
+<p *ngIf="ngIfValue else elseBlock">diretivas-estruturais ngif true</p>
+
+<ng-template #elseBlock>
+  <p>diretivas-estruturais nfig false</p>
+</ng-template>
+
+<button (click)="setNgIf()"> troca ngIf</button>
+
+
+<h2> utilizando ngfor </h2>
+<ul>
+  <li *ngFor="let item of mockList;index as i; first as isFirst">
+    {{i}} - {{ item.nome }}
+    <span style="color: red;" *ngIf="isFirst"> teste is first</span> </li>
+</ul>
+
+
+<h2> utilizando ngSwith </h2>
+<input type="text" [(ngModel)]="switchValue">
+<div [ngSwitch]="switchValue">
+  <p *ngSwitchCase="'evandro'"> evandro </p>
+  <p *ngSwitchDefault> não acertou </p>
+</div>
+
+
+<h2> utilizando ngclass </h2>
+<button (click)="setNgClass()"> troca ngClass</button>
+<div [ngClass]="{'active':ngClassValue,'desactive':!ngClassValue}"></div>
+
+<h2> utilizando ngtemplate </h2>
+<ng-template ngFor let-item [ngForOf]="mockList">
+  <p> {{item.nome}} </p>
+</ng-template>
+
+
+<h2> utilizando pipes </h2>
+<ul>
+  <li *ngFor="let item of mockList;index as i; first as isFirst">
+    {{i}} - {{ item.nome | uppercase}} - {{ date  | date:'dd/MM/yyy'}}
+    <span style="color: red;" *ngIf="isFirst"> teste is first</span> </li>
+</ul>
