@@ -1,1 +1,4 @@
-<p>output works!</p>
+<p *ngFor="let item of list; index as i">
+{{item.nome}} - {{item.idade}}
+<button (click)="getDados(i)">Enviar Dados</button>
+</p>

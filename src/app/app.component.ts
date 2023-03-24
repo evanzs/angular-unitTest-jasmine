@@ -37,9 +37,16 @@ export class AppComponent implements OnInit,DoCheck,AfterContentChecked,AfterCon
   valor:number = 1;
   public addValue:number = 10;
 
+  public getDados:{nome:string,idade:number} | undefined;
 
 
   public add():number{
     return this.valor+=1;
+  }
+
+  public setDados(data:{nome:string,idade:number}){
+    console.log(data)
+    this.getDados=data;
+    console.log(this.getDados)
   }
 }

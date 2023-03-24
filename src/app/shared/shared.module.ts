@@ -12,7 +12,7 @@ import { OutputComponent } from './output/output.component';
     InputComponent,
     OutputComponent
   ],
-  exports:[NewComponentComponent,InputComponent],
+  exports:[NewComponentComponent,InputComponent, OutputComponent],
   imports: [
     CommonModule
   ]
